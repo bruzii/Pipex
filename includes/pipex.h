@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   pipex.h                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bgervais <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/01/05 19:23:09 by bgervais          #+#    #+#             */
+/*   Updated: 2023/01/05 19:33:51 by bgervais         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef PIPEX_H
 # define PIPEX_H
 
@@ -23,8 +35,8 @@ typedef struct s_point
 
 void	ft_free(char **strs);
 void	ft_cmd_2(t_point *p, char **argv, char **envp);
-void	ft_diplay_error(char *str);
-void	ft_fail_child(t_point   *p, int t);
+void	ft_diplay_error(char *str, int t, t_point *p);
+void	ft_fail_child(t_point *p, int t);
 void	ft_cmd_1(t_point *p, char **argv, char **envp);	
 char	**ft_split_env(char **str);
 char	*ft_return_good_path(char **strs, char *cmd);
