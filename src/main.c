@@ -6,7 +6,7 @@
 /*   By: bgervais <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/04 13:04:03 by bgervais          #+#    #+#             */
-/*   Updated: 2023/01/05 20:33:45 by bgervais         ###   ########.fr       */
+/*   Updated: 2023/01/10 13:36:31 by bgervais         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ void	ft_diplay_error(char *str, int t, t_point *p)
 	else if (t == 1)
 	{
 		ft_putstr_fd(str, 2);
-		ft_putstr_fd(": command no found\n", 2);
+		ft_putstr_fd(": command not found\n", 2);
 	}
 	else if (t == 2)
 	{
@@ -62,7 +62,7 @@ int	main(int argc, char **argv, char **envp)
 {
 	t_point	p;
 
-	if (argc != 4)
+	if (argc != 5)
 		return (0);
 	p.fd_in = open(argv[1], O_RDONLY);
 	if (p.fd_in == -1)
